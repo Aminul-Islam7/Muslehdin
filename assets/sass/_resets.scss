@@ -1,0 +1,43 @@
+@import "presets";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+*::selection {
+  background-color: $blue;
+  color: $white;
+}
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $darkblue;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $lightblue;
+}
+
+body {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
