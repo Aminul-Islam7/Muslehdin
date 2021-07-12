@@ -15,9 +15,7 @@ $(function () {
     i++;
     if (i > 3) {
       i = 1;
-      $("#backimg1").fadeIn();
-      $("#backimg2").fadeIn();
-      $("#backimg3").fadeIn();
+      $(".background-img").fadeIn();
     }
   }, 3000);
 });
