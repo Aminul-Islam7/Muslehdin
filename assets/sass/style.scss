@@ -115,7 +115,7 @@
         .line1 {
           @include font(Jost, 22px, 900, $darkblue);
           text-transform: uppercase;
-          letter-spacing: 14px;
+          letter-spacing: 1px;
         }
         .line2 {
           margin-top: -5px;
