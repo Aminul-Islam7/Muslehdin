@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    text-align: center;
+    padding: 80px;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+  }
+
+  section {
+    padding: 150px 40px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  #one {
+    background-color: blue;
+  }
+
+  #two {
+    background-color: green;
+  }
+
+  #three {
+    background-color: red;
+  }
+
+  #four {
+    background-color: yellow;
+    color: #000;
+  }
+</style>
+
+<body>
+
+  <nav>
+    <a href="#one">One</a>
+    <a href="#two">Two</a>
+    <a href="#three">Three</a>
+    <a href="#four">Four</a>
+  </nav>
+
+  <section id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo libero id ipsam delectus reiciendis
+    dolorem tempore non, deserunt numquam iste praesentium distinctio ea, suscipit molestias? Consequuntur non modi
+    molestias nobis esse quasi doloribus illo similique nemo iure magni in vel temporibus soluta, dolor tenetur unde,
+    laudantium fugit, perspiciatis quos eaque sapiente itaque eveniet error! Ad expedita consequuntur odit, aliquam
+    aperiam repellat molestiae cum. Exercitationem praesentium molestias deleniti repellendus ipsam vel! Consectetur
+    natus sequi optio, quod porro et dolorum quaerat laboriosam debitis suscipit velit, recusandae officia saepe numquam
+    eveniet architecto dolore eaque corrupti provident ad. Voluptatibus nemo accusantium error consectetur illum.
+  </section>
+  <section id="two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus voluptatem adipisci nemo unde
+    obcaecati at laboriosam aperiam, quia blanditiis, vel soluta praesentium vitae in debitis perspiciatis laudantium
+    accusantium labore velit suscipit dicta natus? Nisi asperiores hic, quae eos ea ab, perspiciatis adipisci sunt
+    voluptatibus voluptas quidem sint ipsa sit reiciendis ducimus in porro libero dolores? Saepe voluptas doloremque
+    expedita error. Deleniti, quia esse? Non exercitationem incidunt eveniet quas consequuntur est quae quo, debitis
+    similique voluptatem libero porro voluptatibus tempore sint eligendi a tempora possimus quaerat quod ducimus, et,
+    commodi unde sequi. Odio dignissimos reprehenderit quia? Temporibus quod quidem nemo voluptate.</section>
+  <section id="three">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos hic reiciendis, soluta inventore
+    dolores maxime a perferendis? Provident similique veritatis dicta ratione labore inventore, beatae debitis aut iste,
+    ipsum facere corrupti placeat vero in non? Quasi praesentium, libero, at facere aperiam reiciendis dignissimos non
+    accusantium harum obcaecati, nesciunt similique expedita. Quas iure tenetur ea recusandae? Assumenda, a in
+    voluptatem rem ab dolorem similique autem sint necessitatibus impedit sit dolores nam ut magnam sapiente alias cum
+    error vero aliquam velit saepe voluptate quam totam? Commodi, labore voluptatem magnam minima maiores voluptate
+    delectus tempore eius ducimus quis adipisci corrupti consectetur cupiditate ipsum.</section>
+  <section id="four">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet reiciendis aperiam enim ipsam
+    suscipit similique reprehenderit eius iure corporis. Iste tempore quia quibusdam, dolor, error aliquid impedit neque
+    ut nihil cumque corrupti consectetur eum fuga odit obcaecati suscipit laboriosam dolore atque. Numquam eaque
+    reiciendis voluptates tempore deserunt corrupti doloremque voluptas quam deleniti labore. Reiciendis laboriosam
+    voluptates obcaecati at fugit quos repellendus natus! Ad repellendus eveniet corrupti? Deleniti, rem autem? Enim at
+    esse quas aperiam optio aliquam provident in magni facilis. Ipsam, reiciendis dolor itaque consequatur vel
+    assumenda, exercitationem molestias suscipit quibusdam quam excepturi dicta dolores officia fugiat minus magnam
+    corrupti.</section>
+
+</body>
+
+<script>
+
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 100
+          }, 1000, function () {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+</script>
+
+</html>
