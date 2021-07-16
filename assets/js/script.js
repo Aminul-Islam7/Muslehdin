@@ -58,5 +58,10 @@ $("#searchbar").focus(function () {
 });
 
 $("#searchbar").focusout(function () {
-  $(".search .placeholder").show();
+  if ($("#searchbar").val() != "") {
+    console.log($("#searchbar").val());
+    $(".search .placeholder").hide();
+  } else {
+    $(".search .placeholder").show();
+  }
 });
