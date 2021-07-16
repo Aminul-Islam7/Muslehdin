@@ -42,3 +42,8 @@ img,
 svg {
   vertical-align: middle;
 }
+
+::placeholder {
+  color: $darkblue;
+  opacity: 0.5;
+}

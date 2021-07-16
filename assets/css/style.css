@@ -203,6 +203,26 @@ svg {
   vertical-align: middle;
 }
 
+::-webkit-input-placeholder {
+  color: #050566;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  color: #050566;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  color: #050566;
+  opacity: 0.5;
+}
+
+::placeholder {
+  color: #050566;
+  opacity: 0.5;
+}
+
 .space {
   width: 100%;
   height: 1000px;
@@ -302,8 +322,8 @@ svg {
 
 #header #navbar .navbar {
   padding: 20px 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #header #navbar .navbar-brand {
@@ -314,8 +334,8 @@ svg {
 
 #header #navbar .navbar-brand img {
   width: 130px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   position: relative;
   top: 5px;
 }
@@ -335,12 +355,58 @@ svg {
   text-transform: uppercase;
   line-height: 14px;
   margin-top: 12px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #header #navbar .navbar-brand .logo-part .marine {
   letter-spacing: 8px;
+}
+
+#header #navbar .search {
+  margin-left: 150px;
+  position: relative;
+}
+
+#header #navbar .search i {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: rgba(5, 5, 102, 0.7);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#header #navbar .search #searchbar {
+  width: 280px;
+  padding: 10px 20px 10px 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(5, 5, 102, 0.5);
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #050566;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#header #navbar .search #searchbar:focus, #header #navbar .search #searchbar:hover {
+  -webkit-box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
+          box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
+}
+
+#header #navbar .search .placeholder {
+  position: absolute;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #050566;
+  opacity: 0.5;
+  margin: 0;
+  top: 12px;
+  left: 40px;
+  z-index: -1;
 }
 
 #header #navbar .scrolled {
@@ -362,6 +428,18 @@ svg {
 
 #header #navbar .scrolled .navbar-brand .logo-part .marine {
   letter-spacing: 7px;
+}
+
+#header #navbar .scrolled .search i {
+  top: 13px;
+}
+
+#header #navbar .scrolled .search #searchbar {
+  padding: 8px 20px 8px 40px;
+}
+
+#header #navbar .scrolled .search .placeholder {
+  top: 10px;
 }
 
 #header #navbar .navbar-nav {
@@ -452,8 +530,8 @@ svg {
   font-size: 50px;
   font-weight: 900;
   color: #f2fdff;
-  -webkit-filter: drop-shadow(0px 0px 40px #050566);
-          filter: drop-shadow(0px 0px 40px #050566);
+  -webkit-filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.8));
   text-transform: uppercase;
 }
 
@@ -477,6 +555,7 @@ svg {
   line-height: 24px;
   text-align: center;
   margin: 0 auto 20px;
+  z-index: 1;
 }
 
 #header #banner .background-overlay .actions {
@@ -526,14 +605,14 @@ svg {
   font-size: 16px;
   font-weight: 700;
   color: #f2fdff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #header #banner .background-overlay .actions .call-btn i {
   margin: 0 4px 0 12px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #header #banner .background-overlay .actions .call-btn:hover {

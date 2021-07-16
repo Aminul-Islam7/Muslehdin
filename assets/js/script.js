@@ -19,3 +19,20 @@ $(function () {
     }
   }, 3000);
 });
+
+var typed = new Typed(".search .placeholder", {
+  strings: ["Product Name, Brand, Model", "What are you looking for?"],
+  typeSpeed: 30,
+  showCursor: false,
+  loop: true,
+  loopCount: Infinity,
+  backDelay: 3000,
+});
+
+$("#searchbar").focus(function () {
+  $(".search .placeholder").hide();
+});
+
+$("#searchbar").focusout(function () {
+  $(".search .placeholder").show();
+});
