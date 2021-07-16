@@ -1,8 +1,12 @@
+// VARIABLES
+
 $overlay: rgba(0, 0, 0, 0.6);
 $white: #f2fdff;
 $lightblue: #5587dd;
 $blue: #0055dd;
 $darkblue: #050566;
+
+// MIXINS
 
 @mixin flexCenter($direction: row) {
   display: flex;
@@ -11,7 +15,7 @@ $darkblue: #050566;
   flex-direction: $direction;
 }
 
-@mixin font($value, $size: unset, $weight: unset, $color: unset) {
+@mixin font($value, $size, $weight, $color) {
   font-family: "#{$value}", sans-serif;
   font-size: $size;
   font-weight: $weight;
@@ -27,10 +31,9 @@ $darkblue: #050566;
 }
 
 @mixin button($background: "dark") {
-  @include font(Nunito, 16px, 700);
+  @include font(Nunito, 16px, 700, $white);
   padding: 14px 40px;
   background-color: $blue;
-  color: $white;
   border-radius: 5px;
   transition: 0.3s;
 
@@ -63,10 +66,29 @@ $darkblue: #050566;
   }
 }
 
+// CLASSES
+
 .space {
   width: 100%;
   height: 1000px;
 }
+
+.title {
+  @include flexCenter();
+  justify-content: start;
+
+  h2 {
+    @include font(Jost, 30px, 800, $darkblue);
+    margin: 0;
+  }
+
+  img {
+    width: 30px;
+    margin-left: 12px;
+  }
+}
+
+// ANIMATIONS
 
 @keyframes move-forever1 {
   0% {
@@ -105,5 +127,17 @@ $darkblue: #050566;
   }
   100% {
     top: 0px;
+  }
+}
+
+@keyframes scale-updown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
