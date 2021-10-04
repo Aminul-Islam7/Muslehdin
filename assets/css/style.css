@@ -181,6 +181,7 @@
 
 *::-webkit-scrollbar-thumb {
   background: #5587dd;
+  border-radius: 10px;
 }
 
 body {
@@ -381,9 +382,9 @@ svg {
   width: 280px;
   padding: 10px 20px 10px 40px;
   border-radius: 40px;
-  border: none;
   -webkit-box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
           box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
+  border: none;
   background-color: transparent;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
@@ -393,10 +394,14 @@ svg {
   transition: 0.1s ease-in-out;
 }
 
-#header #navbar .search #searchbar:focus, #header #navbar .search #searchbar:hover {
+#header #navbar .search #searchbar:hover {
   -webkit-box-shadow: 0 1px 4px rgba(5, 5, 102, 0.7);
           box-shadow: 0 1px 4px rgba(5, 5, 102, 0.7);
-  border: none;
+}
+
+#header #navbar .search #searchbar:focus {
+  -webkit-box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
+          box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
 }
 
 #header #navbar .search .placeholder {
@@ -407,7 +412,7 @@ svg {
   color: #050566;
   opacity: 0.5;
   margin: 0;
-  top: 12px;
+  top: 11px;
   left: 40px;
   z-index: -1;
 }
@@ -439,10 +444,19 @@ svg {
 
 #header #navbar .scrolled .search #searchbar {
   padding: 8px 20px 8px 40px;
+  border: 1px solid rgba(5, 5, 102, 0.5);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#header #navbar .scrolled .search #searchbar:focus {
+  border: none;
+  -webkit-box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
+          box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
 }
 
 #header #navbar .scrolled .search .placeholder {
-  top: 10px;
+  top: 9px;
 }
 
 #header #navbar .navbar-nav {
@@ -463,6 +477,10 @@ svg {
 }
 
 #header #navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #0055dd;
+}
+
+#header #navbar .navbar-nav .nav-item .active {
   color: #0055dd;
 }
 
@@ -670,5 +688,25 @@ svg {
 
 #about {
   padding: 50px 0;
+}
+
+#about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#about .content .about-img img {
+  width: 400px;
 }
 /*# sourceMappingURL=style.css.map */

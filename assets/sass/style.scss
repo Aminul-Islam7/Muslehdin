@@ -50,17 +50,18 @@
         width: 280px;
         padding: 10px 20px 10px 40px;
         border-radius: 40px;
-        // border: 1px solid rgba(5, 5, 102, 0.5);
-        border: none;
         box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
+        border: none;
         background-color: transparent;
         @include font(Nunito, 16px, 400, $darkblue);
         transition: 0.1s ease-in-out;
 
-        &:focus,
         &:hover {
           box-shadow: 0 1px 4px rgba(5, 5, 102, 0.7);
-          border: none;
+        }
+
+        &:focus {
+          box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
         }
       }
 
@@ -69,7 +70,7 @@
         @include font(Nunito, 16px, 400, $darkblue);
         opacity: 0.5;
         margin: 0;
-        top: 12px;
+        top: 11px;
         left: 40px;
         z-index: -1;
       }
@@ -103,10 +104,17 @@
 
         #searchbar {
           padding: 8px 20px 8px 40px;
+          border: 1px solid rgba(5, 5, 102, 0.5);
+          box-shadow: none;
+
+          &:focus {
+            border: none;
+            box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
+          }
         }
 
         .placeholder {
-          top: 10px;
+          top: 9px;
         }
       }
     }
@@ -122,6 +130,10 @@
           &:hover {
             color: $blue;
           }
+        }
+
+        .active {
+          color: $blue;
         }
 
         .products-btn {
@@ -256,4 +268,19 @@
 
 #about {
   padding: 50px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .about-img {
+      // filter: drop-shadow(-5px 5px 10px $darkblue);
+
+      img {
+        width: 400px;
+      }
+    }
+  }
 }

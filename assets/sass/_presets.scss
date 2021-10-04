@@ -80,6 +80,7 @@ $darkblue: #050566;
   h2 {
     @include font(Jost, 30px, 800, $darkblue);
     margin: 0;
+    // text-transform: uppercase;
   }
 
   img {
