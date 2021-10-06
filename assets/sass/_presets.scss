@@ -5,6 +5,7 @@ $white: #f2fdff;
 $lightblue: #5587dd;
 $blue: #0055dd;
 $darkblue: #050566;
+$black: #00000f;
 
 // MIXINS
 
@@ -35,7 +36,7 @@ $darkblue: #050566;
   padding: 14px 40px;
   background-color: $blue;
   border-radius: 70px;
-  transition: 0.3s;
+  transition: 0.2s;
 
   &:hover {
     background-color: $darkblue;
@@ -73,7 +74,7 @@ $darkblue: #050566;
   height: 1000px;
 }
 
-.title {
+.section-title {
   @include flexCenter();
   justify-content: start;
 

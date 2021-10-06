@@ -50,7 +50,7 @@ var typed = new Typed(".search .placeholder", {
   showCursor: false,
   loop: true,
   loopCount: Infinity,
-  backDelay: 3000,
+  backDelay: 4000,
 });
 
 $("#searchbar").focus(function () {

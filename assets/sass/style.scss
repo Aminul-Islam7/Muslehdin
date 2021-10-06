@@ -6,7 +6,7 @@
   #navbar {
     .navbar {
       padding: 20px 0;
-      transition: 0.2s ease-in-out;
+      transition: 0.2s;
     }
 
     .navbar-brand {
@@ -14,7 +14,7 @@
 
       img {
         width: 130px;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
         position: relative;
         top: 5px;
       }
@@ -26,7 +26,7 @@
         text-transform: uppercase;
         line-height: 14px;
         margin-top: 12px;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
 
         .marine {
           letter-spacing: 8px;
@@ -43,7 +43,7 @@
         top: 15px;
         left: 15px;
         color: rgba(5, 5, 102, 0.6);
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
       }
 
       #searchbar {
@@ -62,6 +62,7 @@
 
         &:focus {
           box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
+          background-color: rgba(255, 255, 255, 0.35);
         }
       }
 
@@ -104,12 +105,17 @@
 
         #searchbar {
           padding: 8px 20px 8px 40px;
-          border: 1px solid rgba(5, 5, 102, 0.5);
+          border: 1px solid rgba(5, 5, 102, 0.4);
           box-shadow: none;
 
           &:focus {
             border: none;
+            background-color: rgba(255, 255, 255, 0.5);
             box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4) inset;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
           }
         }
 
@@ -213,11 +219,11 @@
         }
         .call-btn {
           @include font(Nunito, 16px, 700, $white);
-          transition: 0.2s ease-in-out;
+          transition: 0.2s;
 
           i {
             margin: 0 4px 0 12px;
-            transition: 0.2s ease-in-out;
+            transition: 0.2s;
           }
 
           &:hover {
@@ -275,11 +281,88 @@
     justify-content: space-between;
     flex-direction: row;
 
+    .about-text {
+      width: 65%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      @include font(Nunito, 16, 400, rgb(0, 0, 0));
+
+      .item {
+        margin-top: 40px;
+        display: flex;
+        // align-items: center;
+
+        .icon-holder {
+          width: 10%;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            @include flexCenter;
+
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(0, 85, 221, 0.5);
+            border-radius: 50%;
+            color: $blue;
+            font-size: 25px;
+            transition: 0.2s;
+
+            &:hover {
+              border: 1px solid $blue;
+              background-color: $blue;
+              color: $white;
+            }
+          }
+        }
+
+        .details {
+          width: 90%;
+          // margin-left: 20px;
+          font-size: 14px;
+
+          .title {
+            @include font(Jost, 18px, 600, $black);
+          }
+        }
+      }
+
+      .about-more {
+        @include button();
+        margin: 30px 30px 0 0;
+        align-self: flex-end;
+
+        i {
+          margin-left: 3px;
+          transition: 0.2s;
+        }
+
+        &:hover {
+          padding-right: 36px;
+
+          i {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+
     .about-img {
       // filter: drop-shadow(-5px 5px 10px $darkblue);
+      width: 35%;
+      height: 500px;
+      overflow: hidden;
+      // background: linear-gradient(to bottom, blue, $white 100%);
 
-      img {
-        width: 400px;
+      .img-holder {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent 70%, $white),
+          url("../img/about-img.jpg") no-repeat center;
+        // background: url("../img/about-img.jpg") no-repeat center;
+        background-size: cover;
+        z-index: -1;
       }
     }
   }
