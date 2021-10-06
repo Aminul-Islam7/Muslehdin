@@ -65,3 +65,5 @@ $("#searchbar").focusout(function () {
     $(".search .placeholder").show();
   }
 });
+
+// $(".count").counterUp();

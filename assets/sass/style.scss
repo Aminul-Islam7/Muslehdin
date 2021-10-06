@@ -272,6 +272,7 @@
   }
 }
 
+//ABOUT SECTION STARTS
 #about {
   padding: 50px 0;
 
@@ -286,7 +287,7 @@
       margin-top: 20px;
       display: flex;
       flex-direction: column;
-      @include font(Nunito, 16, 400, rgb(0, 0, 0));
+      @include font(Nunito, 16, 400, $black);
 
       .item {
         margin-top: 40px;
@@ -363,6 +364,57 @@
         // background: url("../img/about-img.jpg") no-repeat center;
         background-size: cover;
         z-index: -1;
+      }
+    }
+  }
+}
+
+//COUNTER SECTION STARTS
+#counter {
+  background-color: $lightblue;
+  padding: 70px 0;
+
+  .count-box {
+    @include flexCenter(column);
+    width: 100%;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.1);
+    padding: 30px 0 15px 0;
+    position: relative;
+    transition: 0.2s;
+
+    .icon-holder {
+      @include flexCenter;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $blue;
+      transition: 0.2s;
+
+      i {
+        font-size: 25px;
+        color: $white;
+      }
+    }
+
+    .count {
+      @include font(Jost, 36px, 600, $black);
+    }
+
+    .title {
+      @include font(Nunito, 14px, 400, $black);
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.2);
+
+      .icon-holder {
+        background-color: $darkblue;
       }
     }
   }

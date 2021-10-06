@@ -180,7 +180,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #5587dd;
+  background: #7aabff;
 }
 
 body {
@@ -724,7 +724,7 @@ svg {
   font-family: "Nunito", sans-serif;
   font-size: 16;
   font-weight: 400;
-  color: black;
+  color: #00000f;
 }
 
 #about .content .about-text .item {
@@ -833,5 +833,90 @@ svg {
   background: linear-gradient(to bottom, transparent 70%, #f2fdff), url("../img/about-img.jpg") no-repeat center;
   background-size: cover;
   z-index: -1;
+}
+
+#counter {
+  background-color: #7aabff;
+  padding: 70px 0;
+}
+
+#counter .count-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-color: #f2fdff;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.1);
+          box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.1);
+  padding: 30px 0 15px 0;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#counter .count-box .icon-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0055dd;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#counter .count-box .icon-holder i {
+  font-size: 25px;
+  color: #f2fdff;
+}
+
+#counter .count-box .count {
+  font-family: "Jost", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #00000f;
+}
+
+#counter .count-box .title {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #00000f;
+}
+
+#counter .count-box:hover {
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.2);
+          box-shadow: 1px 1px 15px 0px rgba(0, 0, 20, 0.2);
+}
+
+#counter .count-box:hover .icon-holder {
+  background-color: #050566;
 }
 /*# sourceMappingURL=style.css.map */
