@@ -40,7 +40,7 @@ h1 {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 20px;
 }
 
 .uncon {
@@ -56,6 +56,11 @@ h1 {
   transition: 0.2s;
   font-weight: 600;
   margin-top: 5px;
+  line-height: 18px;
+}
+
+.number {
+  margin-top: 10px;
 }
 
 .contact:hover {
@@ -69,5 +74,8 @@ h1 {
 
   h1 {
     font-size: 18px;
+  }
+  .number .contact {
+    font-size: 15px;
   }
 }
