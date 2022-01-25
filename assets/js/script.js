@@ -67,3 +67,5 @@ $("#searchbar").focusout(function () {
 });
 
 // $(".count").counterUp();
+
+$(".review-slider").slick();

@@ -376,7 +376,7 @@
   background-size: cover;
   background-attachment: fixed;
   .overlay {
-    background: rgba(0, 0, 15, 0.7);
+    background: $overlay;
     padding: 70px 0;
 
     .count-box {
@@ -492,6 +492,58 @@
       transform: scale(1.05);
       box-shadow: 0 0 10px rgba(0, 0, 15, 0.3);
       // background-color: $darkblue;
+    }
+  }
+}
+
+// TESTIMONIAL SECTION STRATS
+#testimonial {
+  background: url(../img/testimonial/testimonial-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .overlay {
+    padding: 60px 0;
+    background: $overlay;
+    color: $white;
+
+    .review {
+      @include flexCenter(column);
+
+      .img-bg {
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        background: $white-overlay;
+        @include flexCenter();
+
+        .img-holder {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .name {
+        @include font(Oswald, 21px, 500, $white);
+        margin: 7px 0 2px 0;
+      }
+
+      .profession {
+        @include font(Jost, 15px, 400, rgba(242, 253, 255, 0.8));
+      }
+
+      .review-text {
+        @include font(Nunito, 16px, 400, rgba(242, 253, 255, 0.9));
+        font-style: italic;
+        max-width: 1000px;
+        text-align: center;
+      }
     }
   }
 }

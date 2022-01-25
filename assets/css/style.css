@@ -847,7 +847,7 @@ svg {
 }
 
 #counter .overlay {
-  background: rgba(0, 0, 15, 0.7);
+  background: rgba(0, 0, 15, 0.6);
   padding: 70px 0;
 }
 
@@ -1007,5 +1007,89 @@ svg {
           transform: scale(1.05);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 15, 0.3);
           box-shadow: 0 0 10px rgba(0, 0, 15, 0.3);
+}
+
+#testimonial {
+  background: url(../img/testimonial/testimonial-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#testimonial .overlay {
+  padding: 60px 0;
+  background: rgba(0, 0, 15, 0.6);
+  color: #f2fdff;
+}
+
+#testimonial .overlay .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#testimonial .overlay .review .img-bg {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: rgba(242, 253, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#testimonial .overlay .review .img-bg .img-holder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#testimonial .overlay .review .img-bg .img-holder img {
+  width: 100%;
+}
+
+#testimonial .overlay .review .name {
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  color: #f2fdff;
+  margin: 7px 0 2px 0;
+}
+
+#testimonial .overlay .review .profession {
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(242, 253, 255, 0.8);
+}
+
+#testimonial .overlay .review .review-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(242, 253, 255, 0.9);
+  font-style: italic;
+  max-width: 1000px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
