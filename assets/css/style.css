@@ -183,6 +183,10 @@
   background: #7aabff;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
+
 body {
   height: 100vh;
   background-color: #f2fdff;
@@ -1016,9 +1020,8 @@ svg {
 }
 
 #testimonial .overlay {
-  padding: 60px 0;
+  padding: 70px 0 90px 0;
   background: rgba(0, 0, 15, 0.6);
-  color: #f2fdff;
 }
 
 #testimonial .overlay .review {
@@ -1035,6 +1038,8 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #testimonial .overlay .review .img-bg {
@@ -1091,5 +1096,141 @@ svg {
   font-style: italic;
   max-width: 1000px;
   text-align: center;
+  line-height: 32px;
+}
+
+#testimonial .overlay .review .review-text i.left {
+  top: -5px;
+  margin: 0 5px;
+}
+
+#testimonial .overlay .review .review-text i.right {
+  top: 5px;
+  margin: 0 5px;
+}
+
+#testimonial .overlay .review-slider {
+  position: relative;
+}
+
+#testimonial .overlay .review-slider ul {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0;
+}
+
+#testimonial .overlay .review-slider ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#testimonial .overlay .review-slider ul li button {
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(242, 253, 255, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#testimonial .overlay .review-slider ul li button:hover {
+  background: #7aabff;
+}
+
+#testimonial .overlay .review-slider ul li.slick-active button {
+  background: #7aabff;
+}
+
+#testimonial .review:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#team {
+  position: relative;
+  padding: 70px;
+}
+
+#team #particles {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#team .member {
+  margin: 20px auto;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 15, 0.2);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 15, 0.2);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  position: relative;
+  -webkit-animation: move-updown linear infinite;
+          animation: move-updown linear infinite;
+}
+
+#team .member .img-holder {
+  width: 100%;
+  height: 400px;
+  padding-top: 20px;
+  position: relative;
+  background: rgba(122, 171, 255, 0.15);
+  overflow: hidden;
+}
+
+#team .member .img-holder .member-img {
+  min-width: 300px;
+  max-width: 330px;
+  min-height: 350px;
+  max-height: 380px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#team .member .img-holder .wave {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#team .member .details {
+  background: #050566;
+  padding: 1px 20px 20px 20px;
+  text-align: center;
+}
+
+#team .member .details .name {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #f2fdff;
+  text-transform: uppercase;
+  margin: 7px 0 2px 0;
+}
+
+#team .member .details .post {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(242, 253, 255, 0.8);
+}
+
+#team .member .details .social-icons a {
+  color: #f2fdff;
+  padding: 0 10px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */

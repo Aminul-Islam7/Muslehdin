@@ -24,6 +24,10 @@
   // border-radius: 10px;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
+
 body {
   height: 100vh;
   background-color: $white;

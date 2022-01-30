@@ -503,12 +503,12 @@
   background-attachment: fixed;
 
   .overlay {
-    padding: 60px 0;
+    padding: 70px 0 90px 0;
     background: $overlay;
-    color: $white;
 
     .review {
       @include flexCenter(column);
+      cursor: grab;
 
       .img-bg {
         width: 155px;
@@ -543,6 +543,132 @@
         font-style: italic;
         max-width: 1000px;
         text-align: center;
+        line-height: 32px;
+
+        i.left {
+          top: -5px;
+          margin: 0 5px;
+        }
+
+        i.right {
+          top: 5px;
+          margin: 0 5px;
+        }
+      }
+    }
+
+    .review-slider {
+      position: relative;
+
+      ul {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin: 0 5px;
+
+          button {
+            font-size: 0;
+            width: 14px;
+            height: 14px;
+            border: none;
+            border-radius: 50%;
+            background: $white-overlay;
+            transition: 0.3s;
+
+            &:hover {
+              background: $lightblue;
+            }
+          }
+        }
+
+        li.slick-active {
+          button {
+            background: $lightblue;
+          }
+        }
+      }
+    }
+  }
+  .review:active {
+    cursor: grabbing;
+  }
+}
+
+// TEAM SECTION STARTS
+
+#team {
+  position: relative;
+  padding: 70px;
+
+  #particles {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .member {
+    margin: 20px auto;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 15, 0.2);
+    backdrop-filter: blur(7px);
+    position: relative;
+    animation: move-updown linear infinite;
+
+    .img-holder {
+      width: 100%;
+      height: 400px;
+      padding-top: 20px;
+      position: relative;
+      background: rgba(122, 171, 255, 0.15);
+      overflow: hidden;
+
+      .member-img {
+        min-width: 300px;
+        max-width: 330px;
+        min-height: 350px;
+        max-height: 380px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+
+      .wave {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .details {
+      background: $darkblue;
+      padding: 1px 20px 20px 20px;
+      text-align: center;
+
+      .name {
+        @include font(Oswald, 22px, 500, $white);
+        text-transform: uppercase;
+        margin: 7px 0 2px 0;
+      }
+
+      .post {
+        @include font(Jost, 16px, 400, rgba(242, 253, 255, 0.8));
+      }
+
+      .social-icons a {
+        color: $white;
+        padding: 0 10px;
+        font-size: 20px;
       }
     }
   }
