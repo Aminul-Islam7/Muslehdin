@@ -84,6 +84,33 @@ $(".review-slider").slick({
   accessibility: true,
 });
 
+$(".brand-slider").slick({
+  infinite: true,
+  slidesToShow: 5,
+  arrows: false,
+  focusOnSelect: true,
+  centerMode: true,
+  centerPadding: "0",
+  speed: 700,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  easing: "swing",
+  swipeToSlide: true,
+  touchThreshold: 100,
+  edgeFriction: 0.1,
+  // adaptiveHeight: true,
+  lazyLoad: "ondemand",
+  accessibility: true,
+});
+
+// $(".member").on("mouseover", function () {
+//   $(this).addClass("slow-animation");
+// });
+
+// $(".member").on("mouseleave", function () {
+//   $(this).removeClass("slow-animation");
+// });
+
 particlesJS("particles", {
   particles: {
     number: { value: 300, density: { enable: false, value_area: 800 } },

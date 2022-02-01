@@ -93,6 +93,10 @@ $black: #00000f;
   }
 }
 
+// .slow-animation {
+//   animation-duration: 20s !important;
+// }
+
 // ANIMATIONS
 
 @keyframes move-forever1 {
@@ -128,7 +132,7 @@ $black: #00000f;
     top: 0px;
   }
   50% {
-    top: 7px;
+    top: 15px;
   }
   100% {
     top: 0px;
