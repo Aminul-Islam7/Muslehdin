@@ -125,6 +125,28 @@
   }
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @-webkit-keyframes scale-updown {
   0% {
     -webkit-transform: scale(1);
@@ -306,6 +328,17 @@ svg {
   }
   100% {
     top: 0px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1235,13 +1268,18 @@ svg {
   color: #7aabff;
 }
 
-#brands {
-  padding: 70px;
+#brands .overlay {
+  padding: 70px 0;
+  background: url("../img/brands/brands-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-#brands .brand {
+#brands .overlay .brand {
+  background-color: rgba(242, 253, 255, 0.7);
   height: 150px;
-  border: 1px solid #ccc;
+  border: none;
+  border-radius: 10px;
   padding: 40px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1251,20 +1289,50 @@ svg {
           justify-content: center;
   margin: 0 10px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-#brands .brand:focus, #brands .brand:hover {
-  border-color: #6fda44;
+#brands .overlay .brand:focus, #brands .overlay .brand:hover {
+  background-color: #f2fdff;
 }
 
-#brands .brand img {
+#brands .overlay .brand img {
   display: block;
   max-height: 140px;
   max-width: 210px;
 }
 
-#brands .slick-center {
-  border-color: #6fda44;
+#brands .overlay .slick-center {
+  background-color: #f2fdff;
   cursor: auto;
+}
+
+#contact {
+  padding: 70px 0;
+}
+
+#contact .items {
+  margin-top: 40px;
+}
+
+#contact .items .infos {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 4px solid #7aabff;
+}
+
+#contact .items .infos .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact .items .message {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border-top: 4px solid #7aabff;
 }
 /*# sourceMappingURL=style.css.map */

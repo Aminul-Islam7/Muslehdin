@@ -44,6 +44,19 @@ $(function () {
   }, 3000);
 });
 
+$(function () {
+  let i = 1;
+
+  setInterval(function () {
+    $("#bgimg" + i).fadeOut();
+    i++;
+    if (i > 4) {
+      i = 1;
+      $(".bgimg").fadeIn();
+    }
+  }, 400);
+});
+
 var typed = new Typed(".search .placeholder", {
   strings: ["Product Name, Brand, Model", "What are you looking for?"],
   typeSpeed: 30,
@@ -93,7 +106,7 @@ $(".brand-slider").slick({
   centerPadding: "0",
   speed: 700,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 1000,
   easing: "swing",
   swipeToSlide: true,
   touchThreshold: 100,
@@ -189,3 +202,15 @@ update = function () {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+LottieInteractivity.create({
+  mode: "scroll",
+  player: "#firstLottie",
+  actions: [
+    {
+      visibility: [0, 1],
+      type: "seek",
+      frames: [0, 900],
+    },
+  ],
+});

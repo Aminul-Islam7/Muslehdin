@@ -691,31 +691,73 @@
 // BRANDS SECTION STARTS
 
 #brands {
-  padding: 70px;
+  // position: relative;
 
-  .brand {
-    height: 150px;
-    border: 1px solid #ccc;
-    padding: 40px 10px;
-    display: flex;
-    justify-content: center;
-    margin: 0 10px;
-    cursor: pointer;
+  .overlay {
+    padding: 70px 0;
+    background: url("../img/brands/brands-bg.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // height: 100%;
+    // width: 100%;
 
-    &:focus,
-    &:hover {
-      border-color: #6fda44;
+    .brand {
+      background-color: rgba(242, 253, 255, 0.7);
+      height: 150px;
+      border: none;
+      border-radius: 10px;
+      padding: 40px 10px;
+      display: flex;
+      justify-content: center;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:focus,
+      &:hover {
+        background-color: $white;
+      }
+
+      img {
+        display: block;
+        max-height: 140px;
+        max-width: 210px;
+      }
     }
 
-    img {
-      display: block;
-      max-height: 140px;
-      max-width: 210px;
+    .slick-center {
+      background-color: $white;
+      cursor: auto;
     }
   }
+}
 
-  .slick-center {
-    border-color: #6fda44;
-    cursor: auto;
+// CONTACT SECTION STARTS
+#contact {
+  padding: 70px 0;
+
+  .items {
+    margin-top: 40px;
+
+    .infos {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border-top: 4px solid $lightblue;
+
+      .info {
+        display: flex;
+      }
+    }
+
+    .message {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border-top: 4px solid $lightblue;
+    }
   }
 }
