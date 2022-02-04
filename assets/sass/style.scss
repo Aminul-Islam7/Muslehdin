@@ -695,7 +695,7 @@
 
   .overlay {
     padding: 70px 0;
-    background: url("../img/brands/brands-bg.png") no-repeat center;
+    background: $lightblue;
     background-size: cover;
     background-attachment: fixed;
     // position: absolute;
@@ -737,27 +737,202 @@
 
 // CONTACT SECTION STARTS
 #contact {
-  padding: 70px 0;
+  padding: 70px 0 240px;
 
   .items {
-    margin-top: 40px;
+    margin-top: 30px;
 
-    .infos {
-      background: #fff;
+    .item {
+      background: $white;
       padding: 30px;
       border-radius: 10px;
-      border-top: 4px solid $lightblue;
+      border-top: 4px solid $blue;
+      box-shadow: 0 5px 15px rgba(0, 0, 15, 0.2);
+      @include font(Nunito, 16px, 400, rgba(0, 0, 15, 0.8));
 
       .info {
+        margin-bottom: 35px;
         display: flex;
+        flex-wrap: wrap;
+
+        .icon-holder {
+          width: 45px;
+          height: 45px;
+          background: $blue;
+          transition: 0.2s;
+          border-radius: 50%;
+          @include flexCenter();
+
+          i {
+            font-size: 22px;
+            color: $white;
+          }
+        }
+
+        .title {
+          @include font(Jost, 22px, 500, $black);
+        }
+
+        .details {
+          width: 80%;
+          margin-left: 15px;
+          @include font(Nunito, 14px, 500, rgba(0, 0, 15, 0.75));
+
+          &:hover {
+            color: $black;
+          }
+        }
+
+        a {
+          @include font(Nunito, 14px, 500, rgba(0, 0, 15, 0.75));
+          transition: 0.2s;
+
+          &:hover,
+          &:visited {
+            color: $blue;
+          }
+        }
+
+        &:hover {
+          .icon-holder {
+            background: $darkblue;
+          }
+        }
+      }
+
+      .map {
+        border-radius: 5px;
+      }
+
+      .form-group {
+        @include font(Nunito, 16px, 600, rgba(0, 0, 15, 0.7));
+
+        input,
+        textarea {
+          margin: 5px 0 20px;
+          padding: 6px 8px;
+          width: 100%;
+          display: block;
+          border: 1px solid rgba(0, 0, 15, 0.2);
+          border-radius: 5px;
+          background: $white;
+
+          &:focus {
+            border: 1px solid $lightblue;
+          }
+        }
+      }
+
+      .submit-btn {
+        display: block;
+        margin: 0 auto;
+        @include button();
+      }
+    }
+  }
+}
+
+footer {
+  @include font(Jost, 14px, 400, $white);
+  #top {
+    background: $darkblue;
+    padding: 20px 0 50px;
+    position: relative;
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      bottom: 100%;
+      left: 0;
+      z-index: -1;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+      img {
+        width: 180px;
       }
     }
 
-    .message {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      border-top: 4px solid $lightblue;
+    .details,
+    .details a {
+      @include font(Jost, 14px, 400, rgba(242, 253, 255, 0.85));
+      transition: 0.2s;
+    }
+
+    h3 {
+      @include font(Jost, 20px, 700, $white);
+    }
+
+    .links {
+      li {
+        margin-top: 18px;
+      }
+
+      i {
+        font-size: 12px;
+        color: $lightblue;
+      }
+
+      a {
+        @include font(Jost, 14px, 400, rgba(242, 253, 255, 0.85));
+        transition: 0.2s;
+        padding: 0 7px;
+
+        &:hover {
+          padding-left: 15px;
+        }
+      }
+    }
+
+    a:hover {
+      @include font(Jost, 14px, 400, $white);
+    }
+
+    .social-links {
+      a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(242, 253, 255, 0.25);
+        text-align: center;
+        margin: 18px 7px 0 0;
+        transition: 0.2s;
+
+        i {
+          color: $white;
+          line-height: 40px;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background: $lightblue;
+        }
+      }
+    }
+  }
+
+  #bottom {
+    background: $black;
+    padding: 30px 0;
+    @include font(Jost, 14px, 400, $white);
+
+    .copyright {
+      float: left;
+
+      a {
+        @include font(Oswald, 13px, 500, $lightblue);
+        text-transform: uppercase;
+      }
+    }
+
+    .credits {
+      font-size: 13px;
+      float: right;
+
+      a {
+        @include font(Oswald, 13px, 400, $lightblue);
+      }
     }
   }
 }

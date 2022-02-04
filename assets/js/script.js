@@ -31,6 +31,19 @@ $(window).scroll(function () {
   // }
 });
 
+$(window).scroll(function () {
+  let height = $(window).scrollTop();
+  if (height > 600) {
+    $(".gototop").fadeIn();
+  } else {
+    $(".gototop").fadeOut();
+  }
+});
+
+$(".gototop").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, 1500);
+});
+
 $(function () {
   let i = 1;
 
@@ -114,6 +127,7 @@ $(".brand-slider").slick({
   // adaptiveHeight: true,
   lazyLoad: "ondemand",
   accessibility: true,
+  pauseOnFocus: false,
 });
 
 // $(".member").on("mouseover", function () {

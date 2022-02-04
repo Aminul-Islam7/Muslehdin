@@ -38,6 +38,7 @@ $black: #00000f;
   @include font(Nunito, 16px, 700, $white);
   padding: 14px 40px;
   background-color: $blue;
+  border: none;
   border-radius: 70px;
   transition: 0.2s;
 
@@ -72,9 +73,27 @@ $black: #00000f;
 
 // CLASSES
 
-.space {
-  width: 100%;
-  height: 1000px;
+.clr {
+  clear: both;
+}
+
+.gototop {
+  position: fixed;
+  font-size: 50px;
+  bottom: 15px;
+  right: 20px;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $white-overlay;
+  border-radius: 50%;
+  z-index: 99;
+  cursor: pointer;
+  display: none;
+  transition: 0.2s;
+
+  &:hover {
+    padding-bottom: 15px;
+  }
 }
 
 .section-title {
