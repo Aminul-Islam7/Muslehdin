@@ -32,23 +32,52 @@
           letter-spacing: 8px;
         }
       }
+
+      .name {
+        @include font(Oswald, 20px, 900, $blue);
+        // filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.8));
+        text-transform: uppercase;
+        position: relative;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .name::before {
+        content: "";
+        width: 2px;
+        height: 0;
+        background: #0055dd;
+        position: absolute;
+        top: 1px;
+        left: -10px;
+        border-radius: 10px;
+        opacity: 0.6;
+        transition: 0.7s;
+      }
     }
 
     .search {
-      margin-left: 150px;
+      margin-left: -130px;
       position: relative;
+      transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-      i {
+      button {
         position: absolute;
-        top: 15px;
-        left: 15px;
-        color: rgba(5, 5, 102, 0.6);
-        transition: 0.2s;
+        top: 10px;
+        right: 15px;
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+
+        i {
+          color: rgba(5, 5, 102, 0.6);
+          transition: 0.2s;
+        }
       }
 
       #searchbar {
         width: 280px;
-        padding: 10px 20px 10px 40px;
+        padding: 10px 45px 10px 20px;
         border-radius: 40px;
         box-shadow: 0 1px 4px rgba(5, 5, 102, 0.4);
         border: none;
@@ -72,7 +101,7 @@
         opacity: 0.5;
         margin: 0;
         top: 11px;
-        left: 40px;
+        left: 20px;
         z-index: -1;
       }
     }
@@ -97,11 +126,22 @@
             letter-spacing: 7px;
           }
         }
+
+        .name {
+          opacity: 1;
+          transition-delay: 0.4s;
+        }
+
+        .name::before {
+          height: 24px;
+          transition-delay: 0.4s;
+        }
       }
 
       .search {
-        i {
-          top: 13px;
+        margin-left: 30px;
+        button {
+          top: 9px;
         }
 
         #searchbar {
@@ -598,6 +638,19 @@
   }
 }
 
+// PARTNERS SECTION STRATS
+#partners {
+  background: url(../img/testimonial/testimonial-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .overlay {
+    padding: 70px 0 90px 0;
+    background: $overlay;
+
+  
+}
+
 // TEAM SECTION STARTS
 
 #team {
@@ -921,8 +974,13 @@ footer {
       float: left;
 
       a {
-        @include font(Oswald, 13px, 500, $lightblue);
+        @include font(Oswald, 13px, 400, $white);
         text-transform: uppercase;
+        transition: 0.2s;
+
+        &:hover {
+          color: $lightblue;
+        }
       }
     }
 
@@ -931,7 +989,12 @@ footer {
       float: right;
 
       a {
-        @include font(Oswald, 13px, 400, $lightblue);
+        @include font(Oswald, 13px, 400, $white);
+        transition: 0.2s;
+
+        &:hover {
+          color: $lightblue;
+        }
       }
     }
   }

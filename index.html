@@ -35,11 +35,17 @@
             <!-- <h1 class="logo-part"><span style="display: none;">Muslehdin</span><span class="marine">Marine</span><span 
                 class="electronics">Electronics</span></h1> -->
           </a>
-          <div class="search">
-            <i class="far fa-search"></i>
-            <input type="text" name="search-query" id="searchbar">
+          <a class="navbar-brand" href="https://www.muslehdin.com/">
+            <h1 class="name">
+              MUSLEHDIN MARINE ELECTRONICS
+            </h1>
+          </a>
+          <form id="search-form" class="search" action="http://localhost/muslehdin/?post_type=product" method="post">
+            <input type="text" name="s" id="searchbar">
             <p class="placeholder"></p>
-          </div>
+            <button type="submit"><i class="far fa-search"></i></button>
+          </form>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -65,7 +71,7 @@
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link products-btn" href="#">Products</a>
+                <a class="nav-link products-btn" href="/muslehdin/products">Products</a>
               </li>
           </div>
         </div>
@@ -324,7 +330,7 @@
     -- ────────────────────────────────────── TESTIMONIAL SECTION STARTS ─────
     -->
 
-    <section id="testimonial">
+    <!-- <section id="testimonial">
       <div class="overlay">
         <div class="review-slider">
           <div class="review">
@@ -390,6 +396,16 @@
             </p>
           </div>
         </div>
+      </div>
+    </section> -->
+
+    <!--
+    -- ────────────────────────────────────── PARTNERS SECTION STARTS ─────
+    -->
+
+    <section id="partners">
+      <div class="overlay">
+
       </div>
     </section>
 
@@ -650,7 +666,7 @@
           &copy; Copyright <a href="https://www.muslehdin.com/">Muslehdin Marine Electronics</a>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed & Developed with 💙 by <a href="#footer">Aminul Islam</a>
+          Designed & Developed with <i class="fas fa-heart"></i> by <a href="#footer">Aminul Islam</a>
         </div>
         <div class="clr"></div>
       </div>
