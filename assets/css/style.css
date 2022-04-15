@@ -441,7 +441,7 @@ svg {
 
 #header #navbar .navbar-brand .name {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 900;
   color: #0055dd;
   text-transform: uppercase;
@@ -457,7 +457,7 @@ svg {
   height: 0;
   background: #0055dd;
   position: absolute;
-  top: 1px;
+  top: 4px;
   left: -10px;
   border-radius: 10px;
   opacity: 0.6;
@@ -466,7 +466,7 @@ svg {
 }
 
 #header #navbar .search {
-  margin-left: -130px;
+  margin-left: -170px;
   position: relative;
   -webkit-transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -563,7 +563,7 @@ svg {
 }
 
 #header #navbar .scrolled .search {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 #header #navbar .scrolled .search button {
@@ -644,7 +644,7 @@ svg {
 
 #header #banner .background .background-img {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -685,8 +685,8 @@ svg {
   font-size: 50px;
   font-weight: 900;
   color: #f2fdff;
-  -webkit-filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.8));
-          filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(0px 0px 40px black);
+          filter: drop-shadow(0px 0px 40px black);
   text-transform: uppercase;
 }
 
@@ -701,13 +701,15 @@ svg {
 }
 
 #header #banner .background-overlay .description {
-  max-width: 700px;
+  max-width: 720px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #f2fdff;
   line-height: 24px;
   text-align: center;
+  -webkit-filter: drop-shadow(0px 0px 40px black);
+          filter: drop-shadow(0px 0px 40px black);
   margin: 5px auto 25px;
   z-index: 1;
 }
@@ -963,8 +965,8 @@ svg {
 #about .content .about-img .img-holder {
   height: 100%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(#f2fdff)), url("../img/about-img.jpg") no-repeat center;
-  background: linear-gradient(to bottom, transparent 70%, #f2fdff), url("../img/about-img.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(#f2fdff)), url("../img/about-img.gif") no-repeat center;
+  background: linear-gradient(to bottom, transparent 70%, #f2fdff), url("../img/about-img.gif") no-repeat center;
   background-size: cover;
   z-index: -1;
 }
@@ -1094,31 +1096,37 @@ svg {
 #services .service .supply {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/supply.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/supply.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .installation {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/installation.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/installation.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .repair {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/repair.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/repair.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .servicing {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/servicing.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/servicing.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .survey {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/survey.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/survey.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .programming {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(#050566)), url("../img/services/programming.jpg") no-repeat center;
   background: linear-gradient(to bottom, transparent 60%, #050566), url("../img/services/programming.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #services .service .title {
@@ -1275,6 +1283,21 @@ svg {
   cursor: grabbing;
 }
 
+#partners {
+  background: url(../img/testimonial/testimonial-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#partners .overlay {
+  padding: 70px 0 90px 0;
+  background: rgba(0, 0, 15, 0.6);
+}
+
+#partners .overlay .section-title h2 {
+  color: #f2fdff;
+}
+
 #team {
   position: relative;
   padding: 70px;
@@ -1290,7 +1313,7 @@ svg {
 }
 
 #team .member {
-  margin: 20px auto;
+  margin: 20px 30px;
   width: 350px;
   overflow: hidden;
   border-radius: 30px;
@@ -1640,15 +1663,16 @@ footer #top .social-links a:hover {
 
 footer #bottom {
   background: #00000f;
-  padding: 30px 0;
+  padding: 20px 0;
   font-family: "Jost", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #f2fdff;
+  text-align: center;
 }
 
 footer #bottom .copyright {
-  float: left;
+  margin-bottom: 10px;
 }
 
 footer #bottom .copyright a {
@@ -1667,7 +1691,6 @@ footer #bottom .copyright a:hover {
 
 footer #bottom .credits {
   font-size: 13px;
-  float: right;
 }
 
 footer #bottom .credits a {

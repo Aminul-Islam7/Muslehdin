@@ -33,7 +33,7 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
   let height = $(window).scrollTop();
-  if (height > 600) {
+  if (height > 1200) {
     $(".gototop").fadeIn();
   } else {
     $(".gototop").fadeOut();
@@ -118,6 +118,23 @@ $(".brand-slider").slick({
   centerMode: true,
   centerPadding: "0",
   speed: 700,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  easing: "swing",
+  swipeToSlide: true,
+  touchThreshold: 100,
+  edgeFriction: 0.1,
+  // adaptiveHeight: true,
+  lazyLoad: "ondemand",
+  accessibility: true,
+  pauseOnFocus: false,
+});
+
+$(".team-slider").slick({
+  infinite: true,
+  slidesToShow: 3,
+  arrows: false,
+  speed: 1000,
   autoplay: true,
   autoplaySpeed: 1000,
   easing: "swing",
