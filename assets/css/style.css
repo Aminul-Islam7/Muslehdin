@@ -396,10 +396,42 @@ svg {
   }
 }
 
+#header {
+  position: relative;
+}
+
+#header #canvas {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  color: #00000000;
+}
+
+#header #navbar {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 #header #navbar .navbar {
   padding: 20px 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+#header #navbar .navbar .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #navbar .close {
+  display: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding-left: 2px;
+  padding-right: 3px;
 }
 
 #header #navbar .navbar-brand {
@@ -465,6 +497,14 @@ svg {
   transition: 0.7s;
 }
 
+#header #navbar .navbar-brand .sm {
+  display: none;
+}
+
+#header #navbar .navbar-brand .sm .electronics {
+  letter-spacing: 1px;
+}
+
 #header #navbar .search {
   margin-left: -170px;
   position: relative;
@@ -524,7 +564,75 @@ svg {
   margin: 0;
   top: 11px;
   left: 20px;
-  z-index: -1;
+}
+
+#header #navbar .search-icon {
+  margin-left: auto;
+  margin-right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.55);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #navbar .search-icon:hover {
+  background-color: #0055dd;
+  border-color: #0055dd;
+  color: #f2fdff;
+}
+
+#header #navbar .mobile-search {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(5, 5, 102, 0.6);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #navbar .mobile-search #search-form {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+}
+
+#header #navbar .mobile-search #search-form #searchbar {
+  background-color: rgba(242, 253, 255, 0.9);
+  width: 400px;
+}
+
+#header #navbar .mobile-search .close-search {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  color: #f2fdff;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #navbar .mobile-search .close-search:hover {
+  color: #7aabff;
 }
 
 #header #navbar .scrolled {
@@ -534,6 +642,8 @@ svg {
           backdrop-filter: blur(20px);
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 #header #navbar .scrolled .navbar-brand img {
@@ -571,7 +681,7 @@ svg {
 }
 
 #header #navbar .scrolled .search #searchbar {
-  padding: 8px 20px 8px 40px;
+  padding: 8px 40px 8px 20px;
   border: 1px solid rgba(5, 5, 102, 0.4);
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -590,6 +700,15 @@ svg {
 
 #header #navbar .scrolled .search .placeholder {
   top: 9px;
+}
+
+#header #navbar .scrolled .mobile-search #searchbar {
+  padding: 10px 40px 10px 25px;
+}
+
+#header #navbar .scrolled .mobile-search .placeholder,
+#header #navbar .scrolled .mobile-search button {
+  top: 12px;
 }
 
 #header #navbar .navbar-nav {
@@ -701,7 +820,7 @@ svg {
 }
 
 #header #banner .background-overlay .description {
-  max-width: 720px;
+  max-width: 780px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -712,6 +831,7 @@ svg {
           filter: drop-shadow(0px 0px 40px black);
   margin: 5px auto 25px;
   z-index: 1;
+  padding: 0 10px;
 }
 
 #header #banner .background-overlay .actions {
@@ -847,7 +967,7 @@ svg {
 }
 
 #about .content .about-text {
-  width: 65%;
+  width: 58%;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -856,6 +976,7 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: justify;
   font-family: "Nunito", sans-serif;
   font-size: 16;
   font-weight: 400;
@@ -870,7 +991,7 @@ svg {
 }
 
 #about .content .about-text .item .icon-holder {
-  width: 10%;
+  width: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -957,8 +1078,9 @@ svg {
 }
 
 #about .content .about-img {
-  width: 35%;
-  height: 500px;
+  margin-top: 30px;
+  width: 40%;
+  height: 520px;
   overflow: hidden;
 }
 
@@ -1136,7 +1258,11 @@ svg {
   color: #f2fdff;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 12px;
+  padding: 12px;
+}
+
+#services .service .sm {
+  font-size: 23px;
 }
 
 #services .service:hover {
@@ -1300,7 +1426,6 @@ svg {
 
 #team {
   position: relative;
-  padding: 70px;
 }
 
 #team #particles {
@@ -1310,6 +1435,41 @@ svg {
   height: 100%;
   position: absolute;
   z-index: -1;
+}
+
+#team .slick-dots {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+}
+
+#team .slick-dots li {
+  margin: 3px;
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #7aabff;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#team .slick-dots li:hover {
+  background-color: #0055dd;
+}
+
+#team .slick-dots li button {
+  color: transparent;
+  border: none;
+  font-size: 0;
+}
+
+#team .slick-dots .slick-active {
+  background-color: #0055dd;
 }
 
 #team .member {
@@ -1322,6 +1482,13 @@ svg {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#team .member:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 #team .member .img-holder {
@@ -1449,8 +1616,6 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 #contact .items .item .info .icon-holder {
@@ -1517,8 +1682,14 @@ svg {
   background: #050566;
 }
 
+#contact .items .item .office {
+  margin-bottom: 14px;
+}
+
 #contact .items .item .map {
   border-radius: 5px;
+  height: 230px;
+  width: 100%;
 }
 
 #contact .items .item .form-group {

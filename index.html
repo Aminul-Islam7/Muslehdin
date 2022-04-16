@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/css/all.min.css">
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="icon" href="assets/img/muslehdin-icon.png">
 </head>
 
@@ -35,12 +36,26 @@
             <!-- <h1 class="logo-part"><span style="display: none;">Muslehdin</span><span class="marine">Marine</span><span 
                 class="electronics">Electronics</span></h1> -->
           </a>
-          <a class="navbar-brand" href="https://www.muslehdin.com/">
+          <a class="navbar-brand brand-name" href="https://www.muslehdin.com/">
             <h1 class="name">
               MUSLEHDIN MARINE ELECTRONICS
             </h1>
+            <h1 class="name sm">
+              MUSLEHDIN MARINE <br> <span class="electronics">ELECTRONICS</span>
+            </h1>
           </a>
-          <form id="search-form" class="search" action="http://localhost/muslehdin/?post_type=product" method="post">
+          <div class="search-icon"><i class="far fa-search"></i></div>
+          <div class="mobile-search">
+            <div class="close-search">
+              <i class="fas fa-times"></i>
+            </div>
+            <form id="search-form" class="search sf2" action="https://muslehdin.com/?post_type=product" method="post">
+              <input type="text" name="s" id="searchbar">
+              <p class="placeholder"></p>
+              <button type="submit"><i class="far fa-search"></i></button>
+            </form>
+          </div>
+          <form id="search-form" class="search sf1" action="https://muslehdin.com/?post_type=product" method="post">
             <input type="text" name="s" id="searchbar">
             <p class="placeholder"></p>
             <button type="submit"><i class="far fa-search"></i></button>
@@ -80,11 +95,11 @@
 
     <section id="banner">
       <div class="background">
-        <div class="background-img" id="backimg3" style="background-image: url('assets/img/banner/background3.jpg');">
+        <!-- <div class="background-img" id="backimg3" style="background-image: url('assets/img/banner/background3.jpg');">
         </div>
         <div class="background-img" id="backimg2" style="background-image: url('assets/img/banner/background2.jpg');">
-        </div>
-        <div class="background-img" id="backimg1" style="background-image: url('assets/img/banner/background1.jpg');">
+        </div> -->
+        <div class="background-img" id="backimg" style="background-image: url('assets/img/banner/background4.jpg');">
         </div>
         <!-- <video class="background-img" src="/assets/img/banner/background.mp4" autoplay="true"></video> -->
       </div>
@@ -99,8 +114,9 @@
           MUSLEHDIN MARINE ELECTRONICS
         </h1>
         <p class="description">
-          A leading service provider of marine Communication, Navigation, & Safety equipment in Bangladesh and Worldwide
-          recondition ship spare parts Supplier.
+          A leading service provider of marine Communication, Navigation, & Safety equipment in Bangladesh and
+          Worldwide Supplier of
+          reconditioned ship Spare Parts
         </p>
         <div class="actions">
           <a class="products-btn" href="#">Products</a>
@@ -144,35 +160,55 @@
         </div>
         <div class="content">
           <article class="about-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis quam hic sunt voluptate
-            corrupti rem, eos possimus excepturi. Veniam minus illo harum omnis commodi culpa fuga sapiente rerum ex.
+            MUSLEHDIN MARINE ELECTRONICS was founded in 1988 by the late Md. Musleh Uddin Bhuiyan [Former Senior
+            Engineer at Marconi
+            International Marine Company Ltd. and Former Radio Technician at Bangladesh Air Force.]
+            <br>
+            He is the first in Bangladesh to acquire equal skills in both marine and aviation technology for
+            communication &
+            navigation equipments through the highest training. Also, he is the pioneer and first successful
+            entrepreneur in this
+            field of technology & business in Bangladesh.
+            <br>
+            <img class="mobile-about-img" src="assets/img/about-img.gif" alt="">
+            <br>
+            Muslehdin Marine Electronics become the largest supplier & service provider of marine electronics equipment
+            in
+            Chattogram within a very short time.
+            Best quality service at a competitive price, sharp management, skilled technician, and above all, their
+            valuable policy
+            support helped them to reach this position.
+            <br>
+            In recent years, the technical and management team has been further trained to meet future demands, and the
+            new
+            generation has been expanded through recruitment.
 
             <div class="about-items">
               <div class="item">
                 <div class="icon-holder">
                   <div class="icon">
-                    <i class="far fa-handshake"></i>
+                    <i class="fas fa-tools"></i>
                   </div>
                 </div>
                 <div class="details">
-                  <div class="title">Muslehdin</div>
-                  <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eum soluta
-                    dolores asperiores quisquam nam!</div>
+                  <div class="title">Top-rated Services</div>
+                  <div class="description">Installation, Repair, Servicing, Programming, Annual Testing & Survey of
+                    Marine Communication, Navigation, and Safety Equipment.</div>
                 </div>
               </div>
               <div class="item">
                 <div class="icon-holder">
                   <div class="icon">
-                    <i class="far fa-ship"></i>
+                    <i class="fas fa-truck"></i>
                   </div>
                 </div>
                 <div class="details">
-                  <div class="title">Marine</div>
-                  <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eius
-                    doloremque soluta.</div>
+                  <div class="title">Worldwide Supply</div>
+                  <div class="description">Local and Worldwide Supply of reconditioned ship Spare Parts and Equipment.
+                  </div>
                 </div>
               </div>
-              <div class="item">
+              <!-- <div class="item">
                 <div class="icon-holder">
                   <div class="icon">
                     <i class="far fa-tools"></i>
@@ -183,7 +219,7 @@
                   <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis adipisci
                     nihil aspernatur architecto sunt.</div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <!-- <a href="#" class="about-more">Learn More <i class="far fa-long-arrow-right"></i></a> -->
           </article>
@@ -204,39 +240,39 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-sm-4 col-6">
               <div class="count-box">
                 <div class="icon-holder">
                   <i class="fas fa-user-tie"></i>
                 </div>
                 <div class="count">
-                  <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2"
+                  <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
                     class="purecounter"></span>
                 </div>
                 <h3 class="title">Skilled Engineers</h3>
               </div>
             </div>
 
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-sm-4 col-6">
               <div class="count-box">
                 <div class="icon-holder">
                   <i class="fas fa-clock"></i>
                 </div>
                 <div class="count">
-                  <span data-purecounter-start="00" data-purecounter-end="34" data-purecounter-duration="2"
-                    class="purecounter"></span>
+                  <span data-purecounter-start="00" data-purecounter-end="34" data-purecounter-duration="1"
+                    class="purecounter"></span><span>+</span>
                 </div>
                 <h3 class="title">Years of Experience</h3>
               </div>
             </div>
 
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-sm-4 col-12">
               <div class="count-box">
                 <div class="icon-holder">
                   <i class="fas fa-smile"></i>
                 </div>
                 <div class="count">
-                  <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2"
+                  <span data-purecounter-start="00" data-purecounter-end="50" data-purecounter-duration="1"
                     class="purecounter"></span><span>+</span>
                 </div>
                 <h3 class="title">Happy Clients</h3>
@@ -275,47 +311,47 @@
           <h2>Our Services</h2>
           <img src="assets/img/circuit.svg" alt="circuit icon - title decoration">
         </div>
-        <article class="services-text">
+        <!-- <article class="services-text">
           * All of our services are related to marine navigation, communication, and safety equipment.
-        </article>
+        </article> -->
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder supply"></div>
-              <h3 class="title">Supply</h3>
+              <h3 class="title sm">Worldwide Supply</h3>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder installation"></div>
               <h3 class="title">Installation</h3>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder repair"></div>
               <h3 class="title">Repair</h3>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder servicing"></div>
               <h3 class="title">Servicing</h3>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder survey"></div>
-              <h3 class="title">Annual Testing & Survey</h3>
+              <h3 class="title sm">Annual Testing & Survey</h3>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-4 col-md-6 col-6">
             <div class="service">
               <div class="img-holder programming"></div>
               <h3 class="title">Programming</h3>
@@ -426,7 +462,7 @@
         -- ────────────────────────────────────── TEAM SECTION STARTS ─────
         -->
     <section id="team">
-      <!-- <div id="particles"></div> -->
+      <div id="particles"></div>
       <div class="container">
         <div class="section-title">
           <h2>Our Leadership Team</h2>
@@ -454,7 +490,7 @@
             </div>
             <div class="details">
               <h3 class="name">Mohammed Amir</h3>
-              <p class="post">Managing Partnar & Engineer</p>
+              <p class="post amir">Managing Partnar & Engineer</p>
               <div class="social-icons">
                 <a href="tel:+880 1819-321306"><i class="fas fa-phone-alt"></i></a>
                 <a href="https://www.facebook.com/amir.rumi.5" target="_blank" rel="noopener noreferrer"><i
@@ -469,7 +505,7 @@
               <img class="wave" src="assets/img/team/wave.svg" alt="Wave Design">
             </div>
             <div class="details">
-              <h3 class="name">Md. Humayun Kabir Bhuiyan</h3>
+              <h3 class="name sm">Md. Humayun Kabir Bhuiyan</h3>
               <p class="post">Managing Partnar & Engineer</p>
               <div class="social-icons">
                 <a href="tel:+880 1974‑312342"><i class="fas fa-phone-alt"></i></a>
@@ -487,11 +523,13 @@
             </div>
             <div class="details">
               <h3 class="name">Lenah Mehzabin</h3>
-              <p class="post">Business Executive & Finance Controller</p>
+              <p class="post">Business Executive</p>
               <div class="social-icons">
                 <a href="tel:+880 1810-137555"><i class="fas fa-phone-alt"></i></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/prieta.mehzabin/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/lenah-mehzabin-01365319a/" target="_blank"
+                  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -504,9 +542,10 @@
               <h3 class="name">Aminul Islam</h3>
               <p class="post">IT Executive & Software Developer</p>
               <div class="social-icons">
-                <a href="tel:+880 1819-321306"><i class="fas fa-phone-alt"></i></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="tel:+880 1634555545"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://www.facebook.com/AminulFardin7/" target="_blank" rel="noopener noreferrer"><i
+                    class="fab fa-facebook"></i></a>
+                <!-- <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a> -->
               </div>
             </div>
           </div>
@@ -562,14 +601,14 @@
 
           <div class="col-lg-5">
             <div class="item">
-              <div class="info">
+              <div class="info office">
                 <div class="icon-holder">
                   <i class="far fa-map-marker-alt"></i>
                 </div>
                 <div class="details">
                   <div class="title">Office:</div>
                   <div class="description">
-                    <p> Mohiuddin Market, Back Side of CDA Market, Pahartali, Chattogram.</p>
+                    <p> Mohiuddin Market (Back Side of CDA Market), Pahartali, Chattogram.</p>
                     <p><span style="color: red;">Temporarily Closed: </span>522, Sheikh Mujib Road, Agrabad C/A,
                       Chattogram-4100, Bangladesh. </p>
                   </div>
@@ -582,8 +621,8 @@
                 <div class="details">
                   <div class="title">Email:</div>
                   <div class="description">
-                    <a href="mailto:info@muslehdin.com">contact@muslehdin.com</a>
-                    <!-- <a href="mailto:musleh_ctg@yahoo.com">musleh_ctg@yahoo.com</a> -->
+                    <a href="mailto:info@muslehdin.com">contact@muslehdin.com</a>,
+                    <a href="mailto:musleh_ctg@yahoo.com">musleh_ctg@yahoo.com</a>
                   </div>
                 </div>
               </div>
@@ -599,14 +638,13 @@
                   </div>
                 </div>
               </div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d461.2331378344404!2d91.78726751031076!3d22.358721864272034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1649991373454!5m2!1sen!2sbd"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d461.23289254118123!2d91.78735058622453!3d22.358795943957396!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1650016473803!5m2!1sen!2sbd"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="col-lg-7">
-            <form class="item" action="" method="post">
+            <form class="item contact-form" action="" method="post">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Name</label>
@@ -623,7 +661,7 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea name="message" rows="10" required=></textarea>
+                <textarea name="message" rows="12" required=></textarea>
               </div>
 
               <button class="submit-btn" type="submit">Send Message</button>
@@ -642,14 +680,14 @@
       <img class="wave" src="assets/img/footer-wave.svg" alt="Wave Image">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <div class="logo">
+          <div class="col-lg-3 col-sm-6">
+            <div class="logo item">
               <img src="assets/img/Logo-Transparent.png" alt="Muslehdin Logo">
             </div>
             <div class="details">
               <p>
-                Mohiuddin Market,
-                <br> Back Side of CDA Market,
+                Mohiuddin Market
+                <br> (Back Side of CDA Market),
                 <br> Pahartali, Chattogram.
                 <br>
                 <br>
@@ -661,8 +699,8 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="links">
+          <div class="col-lg-3 col-sm-6">
+            <div class="links item">
               <h3>Useful Links</h3>
               <ul>
                 <li><i class="fas fa-chevron-right"></i><a href="#">Home</a></li>
@@ -673,8 +711,8 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="links">
+          <div class="col-lg-3 col-sm-6">
+            <div class="links item">
               <h3>Our Services</h3>
               <ul>
                 <li><i class="fas fa-chevron-right"></i><a href="#services">Supply</a></li>
@@ -685,14 +723,15 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="social-links">
+          <div class="col-lg-3 col-sm-6">
+            <div class="social-links item">
               <h3>Our Social Networks</h3>
-              <a href="#footer"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://facebook.com/MuslehdinMarine"><i class="fab fa-facebook-f"></i></a>
               <a href="#footer"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#footer"><i class="fab fa-twitter"></i></a>
-              <a href="#footer"><i class="fab fa-instagram"></i></a>
-              <a href="#footer"><i class="fab fa-youtube"></i></a>
+              <a href="https://wa.me/8801974312342"><i class="fab fa-whatsapp"></i></a>
+              <!-- <a href="#footer"><i class="fab fa-twitter"></i></a> -->
+              <!-- <a href="#footer"><i class="fab fa-instagram"></i></a> -->
+              <!-- <a href="#footer"><i class="fab fa-youtube"></i></a> -->
             </div>
           </div>
         </div>
@@ -702,8 +741,7 @@
     <section id="bottom">
       <div class="container">
         <div class="copyright">
-          Copyright 2022 &copy; <a href="https://www.muslehdin.com/">Muslehdin Marine Electronics</a>. All Rights
-          Reserved
+          Copyright 2022 &copy; <a href="https://www.muslehdin.com/">Muslehdin Marine Electronics</a>.
         </div>
         <div class="credits">
           Designed & Developed with <i class="fas fa-heart"></i> by <a href="#footer">Aminul Islam</a>
@@ -725,6 +763,7 @@
   <script src="assets/js/purecounter_vanilla.js"></script>
   <script src="assets/js/lottie-player.js"></script>
   <script src="assets/js/lottie-interactivity.min.js"></script>
+  <script src="assets/js/fireworks.js"></script>
   <script src="assets/js/script.js"></script>
 
 </body>

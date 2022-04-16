@@ -22,18 +22,61 @@ $('a[href*="#"]')
     }
   });
 
-$(window).scroll(function () {
-  // if ($(window).scrollTop() > $(".navbar").height() + 1) {
-  $(".navbar").toggleClass(
+// $(".fireworks").fireworks({
+//   // opacity: "1",
+//   width: "100%",
+//   height: "100%",
+// });
+
+$(".search-icon").click(function () {
+  $(".mobile-search").toggle();
+});
+
+$(".close-search").click(function () {
+  $(".mobile-search").toggle();
+});
+
+$(document).mouseup(function (e) {
+  var container = $(".mobile-search");
+  var container2 = $("#searchbar");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (
+    container.is(e.target) &&
+    container.has(e.target).length === 0 &&
+    !container2.is(e.target) &&
+    container2.has(e.target).length === 0
+  ) {
+    container.hide();
+  }
+});
+
+$(".navbar-toggler").click(function () {
+  $(".bar").toggle();
+  $(".close").toggle();
+  var $nav = $(".navbar");
+  $nav.addClass(
     "scrolled",
-    $(window).scrollTop() > $(".navbar").height() + 1
+    $(".close").is(":visible") || $("html, body").scrollTop() > $nav.height()
   );
-  // }
+  if (
+    $(".bar").is(":visible") &&
+    $("html, body").scrollTop() <= $nav.height()
+  ) {
+    $nav.removeClass("scrolled");
+  }
+});
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar");
+    $nav.toggleClass("scrolled", $("html, body").scrollTop() > $nav.height());
+  });
 });
 
 $(window).scroll(function () {
   let height = $(window).scrollTop();
-  if (height > 1200) {
+  if (height > 2000) {
     $(".gototop").fadeIn();
   } else {
     $(".gototop").fadeOut();
@@ -70,7 +113,16 @@ $(function () {
   }, 400);
 });
 
-var typed = new Typed(".search .placeholder", {
+var typed = new Typed(".sf2 .placeholder", {
+  strings: ["Product Name, Brand, Model", "What are you looking for?"],
+  typeSpeed: 30,
+  showCursor: false,
+  loop: true,
+  loopCount: Infinity,
+  backDelay: 4000,
+});
+
+var typed2 = new Typed(".sf1 .placeholder", {
   strings: ["Product Name, Brand, Model", "What are you looking for?"],
   typeSpeed: 30,
   showCursor: false,
@@ -131,6 +183,7 @@ $(".brand-slider").slick({
 });
 
 $(".team-slider").slick({
+  dots: true,
   infinite: true,
   slidesToShow: 3,
   arrows: false,
@@ -145,6 +198,32 @@ $(".team-slider").slick({
   lazyLoad: "ondemand",
   accessibility: true,
   pauseOnFocus: false,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+  ],
 });
 
 // $(".member").on("mouseover", function () {
@@ -157,7 +236,7 @@ $(".team-slider").slick({
 
 particlesJS("particles", {
   particles: {
-    number: { value: 300, density: { enable: false, value_area: 800 } },
+    number: { value: 100, density: { enable: false, value_area: 800 } },
     color: { value: "#0055dd" },
     shape: {
       type: "circle",

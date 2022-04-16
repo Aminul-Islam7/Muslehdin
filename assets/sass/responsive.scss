@@ -1,0 +1,503 @@
+/* 320-575 => Extra Small -> col
+576-767 => Small -> col-sm
+768-991 => Medium -> col-md
+992-1199 => large -> col-lg
+1200-1399 => Extra large col-xl 
+1400 => Extra Extra large -> col-xxl */
+
+@media (max-width: 575px) {
+  #header #navbar .brand-name,
+  #header #navbar .brand-name .name {
+    display: none;
+  }
+  #header #navbar .scrolled .brand-name {
+    display: block;
+  }
+
+  #header #navbar .brand-name {
+    display: none;
+  }
+  #header #navbar .brand-name .sm {
+    display: block;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  #header #navbar .scrolled .navbar-brand .name::before {
+    height: 26px;
+    top: 1px;
+  }
+
+  #header #navbar .scrolled .navbar-brand img {
+    width: 80px;
+  }
+
+  #header #navbar .search-icon {
+    display: flex;
+  }
+
+  .sf1 {
+    display: none;
+  }
+
+  #header #navbar .mobile-search #search-form #searchbar {
+    background-color: rgba(242, 253, 255, 0.9);
+    width: 280px;
+  }
+
+  #header #banner .background-overlay .icon {
+    width: 70px;
+  }
+
+  #header #banner .background-overlay .brand-name {
+    font-size: 23px;
+  }
+
+  #header #banner .background-overlay .brand-name .since {
+    font-size: 14px;
+  }
+  #header #banner .background-overlay .description {
+    max-width: 420px;
+    font-size: 14px;
+  }
+
+  #header #banner .background-overlay .actions .products-btn {
+    font-size: 14px;
+    padding: 12px 35px;
+  }
+
+  #header #banner .background-overlay .actions .call-btn {
+    font-size: 14px;
+  }
+
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about .content .about-text {
+    width: 100%;
+  }
+
+  .mobile-about-img {
+    display: block;
+    margin-top: 15px;
+  }
+
+  #about .content .about-text .item {
+    margin-top: 25px;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  #counter .overlay .count-box {
+    margin-top: 50px;
+  }
+
+  #counter .overlay {
+    padding: 20px 0 70px;
+  }
+
+  #services .service {
+    height: 180px;
+  }
+
+  #services .service .img-holder {
+    height: 132px;
+  }
+
+  #services .service .title {
+    font-size: 15px;
+  }
+
+  #services .service .sm {
+    font-size: 13px;
+  }
+
+  #team .section-title h2 {
+    font-size: 25px;
+  }
+
+  #team .member {
+    margin: 20px 10px;
+  }
+
+  #team .member .img-holder {
+    height: 360px;
+  }
+
+  #team .member .img-holder .member-img {
+    height: 320px;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  #contact {
+    padding: 50px 0 90px;
+  }
+
+  #contact .items .item .map {
+    height: 280px;
+  }
+
+  footer #top .item {
+    margin-top: 15px;
+  }
+
+  .gototop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #header #navbar .navbar-brand .name {
+    display: none;
+  }
+
+  #header #navbar .scrolled .navbar-brand .name {
+    display: block;
+  }
+
+  #header #navbar .scrolled .navbar-brand .sm {
+    display: none;
+  }
+
+  #header #navbar .navbar-brand .name {
+    font-size: 20px;
+  }
+
+  #header #navbar .scrolled .navbar-brand .name::before {
+    height: 22px;
+    top: 2px;
+  }
+
+  #header #navbar .search-icon {
+    display: flex;
+  }
+
+  .sf1 {
+    display: none;
+  }
+
+  #header #banner .background-overlay .icon {
+    width: 70px;
+  }
+
+  #header #banner .background-overlay .brand-name {
+    font-size: 36px;
+  }
+
+  #header #banner .background-overlay .brand-name .since {
+    font-size: 16px;
+  }
+  #header #banner .background-overlay .description {
+    max-width: 520px;
+    font-size: 16px;
+  }
+
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about .content .about-text {
+    width: 100%;
+  }
+
+  .mobile-about-img {
+    display: block;
+    margin-top: 15px;
+  }
+
+  #about .content .about-text .item {
+    margin-top: 25px;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  #services .service {
+    height: 190px;
+  }
+
+  #services .service .img-holder {
+    height: 145px;
+  }
+
+  #services .service .title {
+    font-size: 20px;
+    padding: 9px;
+  }
+
+  #services .service .sm {
+    font-size: 16px;
+  }
+
+  #team .section-title h2 {
+    font-size: 25px;
+  }
+
+  #team .member {
+    margin: 20px 10px;
+  }
+
+  #team .member .details .sm {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  #contact {
+    padding: 50px 0 90px;
+  }
+
+  #contact .items .item .map {
+    height: 280px;
+  }
+
+  footer #top .item {
+    margin-top: 15px;
+  }
+
+  .gototop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #header #navbar .search-icon {
+    display: flex;
+  }
+
+  .sf1 {
+    display: none;
+  }
+
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about .content .about-text {
+    width: 100%;
+  }
+
+  .mobile-about-img {
+    display: block;
+    margin-top: 15px;
+  }
+
+  #about .content .about-text .item {
+    margin-top: 25px;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  #services .service {
+    height: 280px;
+  }
+
+  #services .service .img-holder {
+    height: 230px;
+  }
+
+  #services .service .title {
+    font-size: 24px;
+    padding: 9px;
+  }
+
+  #services .service .sm {
+    font-size: 22px;
+  }
+
+  #team .section-title h2 {
+    font-size: 25px;
+  }
+
+  #team .member {
+    margin: 20px 10px;
+  }
+
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  #contact {
+    padding: 50px 0 90px;
+  }
+
+  #contact .items .item .map {
+    height: 320px;
+  }
+
+  footer #top .item {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #header #navbar .brand-name {
+    display: none;
+  }
+
+  #header #navbar .scrolled .brand-name {
+    display: block;
+  }
+
+  #header #navbar .navbar-brand .name {
+    font-size: 17px;
+    padding-top: 4px;
+  }
+
+  #header #navbar .scrolled .navbar-brand .name::before {
+    height: 19px;
+    top: 4px;
+  }
+
+  #header #navbar .scrolled .navbar-brand img {
+    width: 95px;
+  }
+
+  #header #navbar .scrolled .mobile-search {
+    display: none;
+  }
+
+  #header #navbar .search {
+    margin-left: 0px;
+  }
+  .scrolled .sf1 {
+    display: none;
+  }
+
+  #header #navbar .scrolled.search-icon {
+    display: flex;
+  }
+
+  .mobile-about-img {
+    display: none;
+  }
+
+  #about .content .about-text {
+    width: 67%;
+  }
+
+  #about .content .about-img {
+    margin-top: 30px;
+    width: 31%;
+    height: 530px;
+  }
+
+  #services .service {
+    width: 100%;
+    height: 270px;
+  }
+
+  #services .service .img-holder {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+  }
+
+  #services .service .title {
+    font-size: 24px;
+  }
+
+  #services .service .sm {
+    font-size: 19px;
+  }
+
+  .amir {
+    margin-bottom: 42px;
+  }
+
+  #contact .items .item .map {
+    height: 166px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #header #navbar .brand-name {
+    display: none;
+  }
+
+  #header #navbar .scrolled .brand-name {
+    display: block;
+  }
+
+  #header #navbar .scrolled .navbar-brand img {
+    width: 95px;
+  }
+
+  #header #navbar .scrolled .mobile-search {
+    display: none;
+  }
+
+  #header #navbar .search {
+    margin-left: 0px;
+  }
+  .scrolled .sf1 {
+    display: none;
+  }
+
+  #header #navbar .search-icon {
+    margin-left: 20px;
+  }
+
+  #header #navbar .scrolled .search-icon {
+    display: flex;
+  }
+
+  .mobile-about-img {
+    display: none;
+  }
+
+  #about .content .about-text {
+    width: 67%;
+  }
+
+  #about .content .about-img {
+    margin-top: 30px;
+    width: 31%;
+    height: 530px;
+  }
+
+  #services .service {
+    width: 100%;
+    height: 270px;
+  }
+
+  #services .service .img-holder {
+    width: 100%;
+    height: 215px;
+    background-size: cover;
+  }
+
+  #services .service .title {
+    font-size: 26px;
+  }
+
+  #services .service .sm {
+    font-size: 22px;
+  }
+
+  #contact .items .item .map {
+    height: 228px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .search-icon {
+    display: none;
+  }
+
+  .mobile-about-img {
+    display: none;
+  }
+}
