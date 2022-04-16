@@ -131,13 +131,26 @@ var typed2 = new Typed(".sf1 .placeholder", {
   backDelay: 4000,
 });
 
-$("#searchbar").focus(function () {
+$(".searchbar1").focus(function () {
   $(".search .placeholder").hide();
 });
 
-$("#searchbar").focusout(function () {
-  if ($("#searchbar").val() != "") {
-    console.log($("#searchbar").val());
+$(".searchbar1").focusout(function () {
+  if ($(".searchbar1").val() != "") {
+    console.log($(".searchbar1").val());
+    $(".search .placeholder").hide();
+  } else {
+    $(".search .placeholder").show();
+  }
+});
+
+$(".searchbar2").focus(function () {
+  $(".search .placeholder").hide();
+});
+
+$(".searchbar2").focusout(function () {
+  if ($(".searchbar2").val() != "") {
+    console.log($(".searchbar2").val());
     $(".search .placeholder").hide();
   } else {
     $(".search .placeholder").show();

@@ -564,6 +564,7 @@ svg {
   margin: 0;
   top: 11px;
   left: 20px;
+  pointer-events: none;
 }
 
 #header #navbar .search-icon {
