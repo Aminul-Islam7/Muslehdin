@@ -20,8 +20,8 @@ if(isset($_POST['submit']))
 
 	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
 
-	$subject = "Test Subject";
-	$message = "Test Message";
+	$subject = $_POST["subject"];
+	$body = "From: ". $_POST["name"] ."(". $_POST["email"] .")\r\n". $_POST["message"];
 	
 	$headers = "From: $from_add \r\n";
 	$headers .= "Reply-To: $from_add \r\n";
@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
 	$headers .= "X-Mailer: PHP \r\n";
 	
 	
-	if(mail($to_add,$subject,$message,$headers)) 
+	if(mail($to_add,$subject,$body,$headers)) 
 	{
 		$msg = "Mail sent OK";
 	} 
