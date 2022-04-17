@@ -1,3 +1,46 @@
+<?php
+/*
+From http://www.html-form-guide.com 
+This is the simplest emailer one can have in PHP.
+If this does not work, then the PHP email configuration is bad!
+*/
+$msg="";
+if(isset($_POST['submit']))
+{
+    /* ****Important!****
+    replace name@your-web-site.com below 
+    with an email address that belongs to 
+    the website where the script is uploaded.
+    For example, if you are uploading this script to
+    www.my-web-site.com, then an email like
+    form@my-web-site.com is good.
+    */
+
+	$from_add = "contact@muslehdin.com"; 
+
+	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
+
+	$subject = "Test Subject";
+	$message = "Test Message";
+	
+	$headers = "From: $from_add \r\n";
+	$headers .= "Reply-To: $from_add \r\n";
+	$headers .= "Return-Path: $from_add\r\n";
+	$headers .= "X-Mailer: PHP \r\n";
+	
+	
+	if(mail($to_add,$subject,$message,$headers)) 
+	{
+		$msg = "Mail sent OK";
+	} 
+	else 
+	{
+ 	   $msg = "Error sending email!";
+	}
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -644,7 +687,7 @@
             </div>
           </div>
           <div class="col-lg-7">
-            <form class="item contact-form" action="email.php" method="POST">
+            <form class="item contact-form" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Name</label>
@@ -664,7 +707,7 @@
                 <textarea name="message" rows="12" placeholder="Hello there!" required=></textarea>
               </div>
 
-              <button class="submit-btn" type="submit">Send Message</button>
+              <button class="submit-btn" name='submit' type="submit">Send Message</button>
 
             </form>
           </div>
