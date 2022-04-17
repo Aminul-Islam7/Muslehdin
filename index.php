@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
 	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
 
 	$subject = $_POST["subject"];
-	$body = "From: ". $_POST["name"] ."(". $_POST["email"] .")\r\n". $_POST["message"];
+	$body = "From: ". $_POST["name"] ." <". $_POST["email"] .">\r\n\r\n". $_POST["message"];
 	
 	$headers = "From: $from_add \r\n";
 	$headers .= "Reply-To: $from_add \r\n";
