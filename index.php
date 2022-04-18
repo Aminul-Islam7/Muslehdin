@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
 	$body = "From: ". $_POST["name"] ." <". $_POST["email"] .">\r\n\r\n". $_POST["message"];
 	
 	$headers = "From: $from_add \r\n";
-	$headers .= "Reply-To: $_POST["email"] \r\n";
+	$headers .= "Reply-To: $_POST['email'] \r\n";
 	$headers .= "Return-Path: $from_add\r\n";
 	$headers .= "X-Mailer: PHP \r\n";
 	
