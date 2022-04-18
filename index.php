@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     form@my-web-site.com is good.
     */
 
-	$from_add = "no-reply@muslehdin.com"; 
+	$from_add = "info@muslehdin.com"; 
 
 	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
 
@@ -712,7 +712,9 @@ if(isset($_POST['submit']))
               <button class="submit-btn" name='submit' type="submit">Send Message</button>
               
               <script>
-                
+                function show_alert() {
+                  alert("<?php echo $msg ?>");
+                }
               </script>
 
             </form>
