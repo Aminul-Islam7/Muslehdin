@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
 
 	$subject = $_POST["subject"];
 	$body = "From: ". $_POST["name"] ." <". $_POST["email"] .">\r\n\r\n". $_POST["message"];
-	$useremail = $_POST["email"]
+	$useremail = $_POST["email"];
 
 
 	$headers = "From: $from_add \r\n";
