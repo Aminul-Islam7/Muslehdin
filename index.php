@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     form@my-web-site.com is good.
     */
 
-	$from_add = "info@muslehdin.com"; 
+	$from_add = "no-reply@muslehdin.com"; 
 
 	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
 
@@ -708,8 +708,12 @@ if(isset($_POST['submit']))
                 <label for="message">Message</label>
                 <textarea name="message" rows="12" placeholder="Hello there!" required=></textarea>
               </div>
-              <?php echo $msg ?>
+              
               <button class="submit-btn" name='submit' type="submit">Send Message</button>
+              
+              <script>
+                alert("<?php echo $msg ?>");
+              </script>
 
             </form>
           </div>
