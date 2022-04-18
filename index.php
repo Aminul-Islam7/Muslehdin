@@ -33,11 +33,11 @@ if(isset($_POST['submit']))
 	
 	if(mail($to_add,$subject,$body,$headers)) 
 	{
-		$msg = "Message sent!";
+		$msg = "Message sent! We will get back to you soon.";
 	} 
 	else 
 	{
- 	   $msg = "Error sending message!";
+ 	   $msg = "An error occured! Your message was not sent.";
 	}
 }
 ?>
@@ -708,7 +708,7 @@ if(isset($_POST['submit']))
                 <label for="message">Message</label>
                 <textarea name="message" rows="12" placeholder="Hello there!" required=></textarea>
               </div>
-
+              <?php echo $msg ?>
               <button class="submit-btn" name='submit' type="submit">Send Message</button>
 
             </form>
