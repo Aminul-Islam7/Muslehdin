@@ -22,11 +22,9 @@ $('a[href*="#"]')
     }
   });
 
-// $(".fireworks").fireworks({
-//   // opacity: "1",
-//   width: "100%",
-//   height: "100%",
-// });
+function show_alert() {
+  alert("<?php echo $msg ?>");
+}
 
 $(".search-icon").click(function () {
   $(".mobile-search").toggle();

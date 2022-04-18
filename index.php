@@ -689,7 +689,7 @@ if(isset($_POST['submit']))
             </div>
           </div>
           <div class="col-lg-7">
-            <form class="item contact-form" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
+            <form onsubmit="show_alert();" class="item contact-form" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Name</label>
@@ -712,7 +712,7 @@ if(isset($_POST['submit']))
               <button class="submit-btn" name='submit' type="submit">Send Message</button>
               
               <script>
-                alert("<?php echo $msg ?>");
+                
               </script>
 
             </form>
