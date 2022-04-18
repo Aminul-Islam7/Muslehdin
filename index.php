@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     form@my-web-site.com is good.
     */
 
-	$from_add = "contact@muslehdin.com"; 
+	$from_add = "info@muslehdin.com"; 
 
 	$to_add = "contact@muslehdin.com"; //<-- put your yahoo/gmail email address here
 
@@ -31,11 +31,11 @@ if(isset($_POST['submit']))
 	
 	if(mail($to_add,$subject,$body,$headers)) 
 	{
-		$msg = "Mail sent OK";
+		$msg = "Message sent!";
 	} 
 	else 
 	{
- 	   $msg = "Error sending email!";
+ 	   $msg = "Error sending message!";
 	}
 }
 ?>
