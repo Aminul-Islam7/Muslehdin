@@ -1,4 +1,4 @@
-# Muslehdin — Marine Electronics (portfolio)
+# Muslehdin Marine Electronics (Portfolio)
 
 ![Site preview](assets/img/muslehdin-screenshot.png)
 
