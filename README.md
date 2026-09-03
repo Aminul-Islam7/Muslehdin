@@ -1,4 +1,6 @@
-# Muslehdin Marine Electronics (portfolio)
+# Muslehdin — Marine Electronics (portfolio)
+
+![Site preview](assets/img/muslehdin-screenshot.png)
 
 A small, single-page website / landing page for Muslehdin Marine Electronics (Chittagong, Bangladesh). The company has wound down and no longer maintains a domain, so this repository is kept as a portfolio piece and a static snapshot of the original site.
 
